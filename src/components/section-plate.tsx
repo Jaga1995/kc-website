@@ -1,3 +1,5 @@
+import { LogoMark } from "@/components/logo"
+
 const bands = [
   {
     number: "01",
@@ -50,9 +52,10 @@ export function SectionPlate() {
           </li>
         ))}
       </ol>
-      <p className="relative px-6 pt-6 pb-7 font-heading text-5xl tracking-tight italic">
-        K &amp; C
-      </p>
+      <div className="relative flex items-center gap-4 px-6 pt-6 pb-7">
+        <LogoMark inverted className="size-14" />
+        <p className="font-heading text-4xl tracking-tight sm:text-5xl">BrickHome</p>
+      </div>
     </aside>
   )
 }

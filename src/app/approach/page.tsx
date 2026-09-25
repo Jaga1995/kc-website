@@ -6,7 +6,7 @@ import { stages } from "@/lib/site"
 export const metadata: Metadata = {
   title: "Approach",
   description:
-    "How a project with K and C Constructions runs: enquire, site visit, scope, build, and handover.",
+    "How a project with BrickHome Builders runs: enquire, site visit, scope, build, and handover.",
 }
 
 export default function ApproachPage() {

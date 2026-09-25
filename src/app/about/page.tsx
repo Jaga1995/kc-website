@@ -5,12 +5,12 @@ import { company } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "K and C Constructions is a construction and services company based in Bengaluru, India.",
+  description: `${company.brand} is the brand of ${company.registeredName}, a construction and services company based in Bengaluru, India.`,
 }
 
 const facts = [
-  { label: "Name", value: company.name },
+  { label: "Brand", value: company.brand },
+  { label: "Registered name", value: company.registeredName },
   { label: "Base", value: `${company.city}, ${company.country}` },
   { label: "Work", value: "Construction and services" },
   {
@@ -25,7 +25,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Based in Bengaluru. Building, and the services around it."
-        lede="K and C Constructions is a construction and services company working from Bengaluru, India. This page says what that means, and only what we can stand behind today."
+        lede="BrickHome Builders is the public brand. The company is registered as K and C Constructions and works from Bengaluru, India. This page says what that means, and only what we can stand behind today."
       />
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:px-8 md:py-24">
         <div className="md:col-span-5">

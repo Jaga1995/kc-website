@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { InquiryForm } from "@/components/inquiry-form"
 import { PageHero } from "@/components/page-hero"
+import { company } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Contact",
-  description:
-    "Start a project with K and C Constructions. Send an inquiry with your name, phone, email, project type, and a short description.",
+  description: `Start a project with ${company.brand}. Send an inquiry with your name, phone, email, project type, and a short description.`,
 }
 
 const notes = [
@@ -29,7 +29,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Start a project."
-        lede="Tell K and C Constructions what you need built, changed, or managed. The inquiry is the contact path while the office phone, email, and address are still to be published."
+        lede="Tell BrickHome Builders what you need built, changed, or managed. The inquiry is the contact path while the office phone, email, and address are still to be published."
       />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-12 md:px-8 md:py-20">
         <aside className="grid content-start gap-8 md:col-span-4">

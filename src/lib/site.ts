@@ -1,9 +1,11 @@
 export const company = {
-  name: "K and C Constructions",
+  brand: "BrickHome Builders",
+  registeredName: "K and C Constructions",
+  name: "BrickHome Builders",
   city: "Bengaluru",
   country: "India",
   description:
-    "A Bengaluru-based construction and services company. Residential and commercial construction, renovation, civil and structural works, interior fit-out, and project management.",
+    "BrickHome Builders is the brand of K and C Constructions, a Bengaluru-based construction and services company. Residential and commercial construction, renovation, civil and structural works, interior fit-out, and project management.",
 }
 
 export const nav = [

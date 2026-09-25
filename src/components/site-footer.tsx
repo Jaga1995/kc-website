@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Logo } from "@/components/logo"
 import { company, nav } from "@/lib/site"
 
 export function SiteFooter() {
@@ -6,11 +7,10 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-ink bg-primary text-ink">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-12 md:px-8">
         <div className="md:col-span-5">
-          <p className="font-heading text-3xl tracking-tight">
-            {company.name}
-          </p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink">
-            Construction and services, based in {company.city}, {company.country}.
+          <Logo inverted />
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink">
+            {company.brand} is the brand of {company.registeredName}. Construction
+            and services, based in {company.city}, {company.country}.
           </p>
         </div>
         <nav aria-label="Footer" className="md:col-span-3">

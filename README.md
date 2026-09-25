@@ -1,6 +1,6 @@
-# K and C Constructions
+# BrickHome Builders
 
-Marketing site for K and C Constructions, a construction and services company based in Bengaluru, India.
+Marketing site for BrickHome Builders, the public brand of K and C Constructions, a construction and services company based in Bengaluru, India. K and C Constructions is the registered name.
 
 The site explains who the company is, the current services, how a project runs, and a project-inquiry form. Office phone, email, and street address are not published yet.
 

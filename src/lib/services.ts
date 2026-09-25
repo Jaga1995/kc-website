@@ -1,5 +1,5 @@
 /**
- * Current service catalog for K and C Constructions.
+ * Current service catalog for BrickHome Builders.
  * Home, the services page, and the inquiry form all read this list.
  * Add, rename, or retire a service here.
  */

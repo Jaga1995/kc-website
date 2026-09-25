@@ -10,7 +10,7 @@ const saveErrorMessage =
   "The inquiry was not saved. Please try again in a moment. There is no public email to fall back on yet."
 
 export function createReference() {
-  return `KC-${randomBytes(3).toString("hex").toUpperCase()}`
+  return `BH-${randomBytes(3).toString("hex").toUpperCase()}`
 }
 
 type InquiryDeps = {

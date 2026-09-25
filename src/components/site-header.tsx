@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import { Logo } from "@/components/logo"
 import { Button } from "@/components/ui/button"
 import { nav } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -30,18 +31,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm">
       <div className="relative z-50 h-1 bg-announce" />
       <div className="relative z-50 mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 bg-background px-5 md:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="grid size-9 place-items-center border border-ink bg-primary text-[11px] font-medium tracking-[0.14em] text-ink">
-            KC
-          </span>
-          <span className="leading-tight">
-            <span className="block font-heading text-lg leading-none tracking-tight">
-              K and C
-            </span>
-            <span className="mt-1 block text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
-              Constructions
-            </span>
-          </span>
+        <Link href="/" aria-label="BrickHome Builders, home" className="text-ink">
+          <Logo />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-6 lg:flex">

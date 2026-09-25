@@ -2,7 +2,7 @@ import Link from "next/link"
 import { CtaLink } from "@/components/cta-link"
 import { SectionPlate } from "@/components/section-plate"
 import { services } from "@/lib/services"
-import { stages } from "@/lib/site"
+import { company, stages } from "@/lib/site"
 
 const facts = [
   {
@@ -33,10 +33,11 @@ export default function HomePage() {
               <span className="text-ink italic">carried through.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              K and C Constructions is a construction and services company based
-              in Bengaluru. We take residential and commercial work, renovation,
-              civil and structural jobs, interior fit-out, and project
-              management — from the first enquiry to handover.
+              {company.brand} is the public name of {company.registeredName}, a
+              construction and services company based in Bengaluru. We take
+              residential and commercial work, renovation, civil and structural
+              jobs, interior fit-out, and project management — from the first
+              enquiry to handover.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <CtaLink href="/contact">Start a project</CtaLink>

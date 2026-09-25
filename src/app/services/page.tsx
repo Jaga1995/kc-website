@@ -7,7 +7,7 @@ import { services } from "@/lib/services"
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "The current services of K and C Constructions: residential construction, commercial construction, renovation and remodeling, civil and structural works, interior fit-out, and project management.",
+    "The current services of BrickHome Builders: residential construction, commercial construction, renovation and remodeling, civil and structural works, interior fit-out, and project management.",
 }
 
 export default function ServicesPage() {
