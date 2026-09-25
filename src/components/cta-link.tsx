@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 
 const variants = {
   primary:
-    "bg-primary text-primary-foreground hover:bg-primary/90",
+    "border border-ink bg-primary text-primary-foreground hover:bg-brand-line",
   secondary:
     "border border-border bg-background text-foreground hover:bg-sand",
 } as const

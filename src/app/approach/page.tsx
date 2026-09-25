@@ -25,7 +25,7 @@ export default function ApproachPage() {
             className="scroll-mt-28 grid gap-6 border-b border-border py-12 md:grid-cols-12 md:py-16"
           >
             <div className="md:col-span-4">
-              <p className="font-heading text-5xl tracking-tight text-oxide">
+              <p className="font-heading text-5xl tracking-tight text-ink">
                 {stage.number}
               </p>
               <h2 className="mt-3 font-heading text-4xl tracking-tight">
@@ -49,7 +49,7 @@ export default function ApproachPage() {
             still comes first, and the scope is still written before the build.
           </p>
         </div>
-        <div className="flex flex-col items-start justify-end gap-4 border border-border bg-sand/50 p-6">
+        <div className="flex flex-col items-start justify-end gap-4 border border-border bg-sand p-6">
           <p className="text-sm leading-relaxed">
             Office phone, email, and street address will be added when they are
             ready to publish. The inquiry form is the way in.

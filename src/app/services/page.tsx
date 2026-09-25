@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <li key={service.slug} className="shrink-0">
               <a
                 href={`#${service.slug}`}
-                className="whitespace-nowrap text-foreground/80 underline-offset-4 hover:text-oxide hover:underline"
+                className="whitespace-nowrap text-foreground/80 underline-offset-4 hover:text-ink hover:underline hover:decoration-primary"
               >
                 {service.number} {service.title}
               </a>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
           <CtaLink href="/contact">Start a project</CtaLink>
           <Link
             href="/approach"
-            className="inline-flex h-12 items-center justify-center px-2 text-sm font-medium underline decoration-oxide underline-offset-4"
+            className="inline-flex h-12 items-center justify-center px-2 text-sm font-medium underline decoration-primary underline-offset-4"
           >
             See how a project runs
           </Link>

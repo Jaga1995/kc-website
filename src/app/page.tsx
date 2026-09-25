@@ -30,7 +30,7 @@ export default function HomePage() {
             </p>
             <h1 className="mt-5 max-w-xl font-heading text-[2.75rem] leading-[0.95] tracking-tight text-balance sm:text-6xl md:text-7xl">
               The building,{" "}
-              <span className="text-oxide italic">carried through.</span>
+              <span className="text-ink italic">carried through.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               K and C Constructions is a construction and services company based
@@ -89,14 +89,14 @@ export default function HomePage() {
           </p>
           <Link
             href="/about"
-            className="mt-6 inline-flex text-sm font-medium underline decoration-oxide underline-offset-4"
+            className="mt-6 inline-flex text-sm font-medium underline decoration-primary underline-offset-4"
           >
             Read about the company
           </Link>
         </div>
       </section>
 
-      <section className="border-y border-border bg-sand/60">
+      <section className="border-y border-border bg-sand">
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
@@ -109,7 +109,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/services"
-              className="text-sm font-medium underline decoration-oxide underline-offset-4"
+              className="text-sm font-medium underline decoration-primary underline-offset-4"
             >
               Open the full catalog
             </Link>
@@ -124,7 +124,7 @@ export default function HomePage() {
                   <span className="text-xs tracking-[0.18em] text-brass">
                     {service.number}
                   </span>
-                  <span className="mt-8 font-heading text-2xl tracking-tight group-hover:text-oxide">
+                  <span className="mt-8 font-heading text-2xl tracking-tight group-hover:underline group-hover:decoration-primary">
                     {service.title}
                   </span>
                   <span className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -149,7 +149,7 @@ export default function HomePage() {
             <li key={stage.id} className="border-t border-border pt-4">
               <p className="text-xs tracking-[0.18em] text-brass">{stage.number}</p>
               <h3 className="mt-3 font-heading text-2xl tracking-tight">
-                <Link href={`/approach#${stage.id}`} className="hover:text-oxide">
+                <Link href={`/approach#${stage.id}`} className="hover:underline hover:decoration-primary">
                   {stage.title}
                 </Link>
               </h3>
@@ -166,19 +166,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-ink text-paper">
+      <section className="border-t border-ink bg-primary text-ink">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:items-end md:justify-between md:px-8 md:py-20">
           <div className="max-w-xl">
             <h2 className="font-heading text-4xl tracking-tight text-balance md:text-5xl">
               Begin with an enquiry.
             </h2>
-            <p className="mt-4 leading-relaxed text-paper/75">
+            <p className="mt-4 leading-relaxed text-ink">
               Tell us the project type and what the site needs. Office phone,
               email, and street address will be added when they are ready to
               publish. Until then, the form is how a project starts.
             </p>
           </div>
-          <CtaLink href="/contact" className="bg-paper text-ink hover:bg-sand">
+          <CtaLink href="/contact" className="border-ink bg-paper text-ink hover:bg-sand">
             Go to the inquiry form
           </CtaLink>
         </div>

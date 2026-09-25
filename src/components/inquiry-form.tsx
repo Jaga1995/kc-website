@@ -111,7 +111,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
       {banner ? (
         <p
           role="alert"
-          className="border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive"
+          className="border border-error-line bg-destructive/10 px-4 py-3 text-sm text-destructive"
         >
           {banner}
         </p>
@@ -244,26 +244,26 @@ function SuccessState({
     <div
       role="status"
       aria-live="polite"
-      className="border border-border bg-ink p-6 text-paper sm:p-8"
+      className="border border-ink bg-success p-6 text-inverse sm:p-8"
     >
-      <p className="text-xs font-medium tracking-[0.2em] text-[#cbbd9a] uppercase">
+      <p className="text-xs font-medium tracking-[0.2em] text-inverse uppercase">
         Inquiry received
       </p>
       <p className="mt-4 font-heading text-5xl tracking-tight">{reference}</p>
-      <p className="mt-4 max-w-xl text-sm leading-relaxed text-paper/80">
+      <p className="mt-4 max-w-xl text-sm leading-relaxed text-inverse">
         {message} Keep this reference. Office phone, email, and street address
         will be added when they are ready to publish.
       </p>
-      <dl className="mt-8 grid gap-4 border-t border-white/15 pt-6 text-sm sm:grid-cols-2">
+      <dl className="mt-8 grid gap-4 border-t border-inverse/25 pt-6 text-sm sm:grid-cols-2">
         <ReceiptItem label="Name" value={receipt.name} />
         <ReceiptItem label="Phone" value={receipt.phone} />
         <ReceiptItem label="Email" value={receipt.email} />
         <ReceiptItem label="Project type" value={receipt.projectLabel} />
         <div className="sm:col-span-2">
-          <dt className="text-[11px] tracking-[0.16em] text-[#cbbd9a] uppercase">
+          <dt className="text-[11px] tracking-[0.16em] text-inverse uppercase">
             Message
           </dt>
-          <dd className="mt-1 leading-relaxed text-paper/90">{receipt.message}</dd>
+          <dd className="mt-1 leading-relaxed text-inverse">{receipt.message}</dd>
         </div>
       </dl>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -271,11 +271,11 @@ function SuccessState({
           type="button"
           variant="outline"
           onClick={onAnother}
-          className="h-12 rounded-sm bg-paper px-5 text-base text-ink hover:bg-sand"
+          className="h-12 rounded-sm border-ink bg-primary px-5 text-base text-ink hover:bg-brand-line"
         >
           Send another inquiry
         </Button>
-        <CtaLink href="/services" variant="secondary" className="bg-transparent text-paper hover:bg-white/10">
+        <CtaLink href="/services" variant="secondary" className="border-inverse bg-transparent text-inverse hover:bg-inverse/10">
           Read the services
         </CtaLink>
       </div>
@@ -286,10 +286,10 @@ function SuccessState({
 function ReceiptItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="text-[11px] tracking-[0.16em] text-[#cbbd9a] uppercase">
+      <dt className="text-[11px] tracking-[0.16em] text-inverse uppercase">
         {label}
       </dt>
-      <dd className="mt-1 text-paper">{value}</dd>
+      <dd className="mt-1 text-inverse">{value}</dd>
     </div>
   )
 }
