@@ -45,13 +45,19 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
     submitInquiry,
     initialInquiryState,
   )
+  const [sending, setSending] = useState(false)
   const [clientState, setClientState] = useState<Pick<
     InquiryState,
     "message" | "fieldErrors"
   > | null>(null)
+  const busy = sending || pending
+
+  if (sending && !pending && state.status === "error") {
+    setSending(false)
+  }
 
   const fieldErrors = clientState?.fieldErrors ?? state.fieldErrors
-  const banner = pending
+  const banner = busy
     ? ""
     : clientState?.message || (state.status === "error" ? state.message : "")
 
@@ -69,7 +75,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
   return (
     <form
       className="grid gap-5 border border-border bg-card p-5 sm:p-7"
-      aria-busy={pending}
+      aria-busy={busy}
       noValidate
       onSubmit={(event) => {
         event.preventDefault()
@@ -87,7 +93,10 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
           return
         }
         setClientState(null)
-        formAction(data)
+        setSending(true)
+        window.setTimeout(() => {
+          formAction(data)
+        }, 40)
       }}
     >
       <div>
@@ -118,7 +127,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
           id={fieldId("name")}
           name="name"
           autoComplete="name"
-          disabled={pending}
+          disabled={busy}
           aria-invalid={Boolean(fieldErrors.name)}
           aria-describedby={describedBy("name", fieldErrors)}
           className={fieldClass}
@@ -133,7 +142,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
             type="tel"
             inputMode="tel"
             autoComplete="tel"
-            disabled={pending}
+            disabled={busy}
             aria-invalid={Boolean(fieldErrors.phone)}
             aria-describedby={describedBy("phone", fieldErrors)}
             className={fieldClass}
@@ -145,7 +154,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
             name="email"
             type="email"
             autoComplete="email"
-            disabled={pending}
+            disabled={busy}
             aria-invalid={Boolean(fieldErrors.email)}
             aria-describedby={describedBy("email", fieldErrors)}
             className={fieldClass}
@@ -163,7 +172,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
             id={fieldId("projectType")}
             name="projectType"
             defaultValue=""
-            disabled={pending}
+            disabled={busy}
             aria-invalid={Boolean(fieldErrors.projectType)}
             aria-describedby={describedBy("projectType", fieldErrors)}
             className={cn(
@@ -197,7 +206,7 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
           id={fieldId("message")}
           name="message"
           rows={6}
-          disabled={pending}
+          disabled={busy}
           aria-invalid={Boolean(fieldErrors.message)}
           aria-describedby={describedBy("message", fieldErrors, true)}
           className="min-h-36 rounded-sm bg-background px-3 py-3 text-base md:text-base"
@@ -207,10 +216,10 @@ function InquiryFormSession({ onAnother }: { onAnother: () => void }) {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <Button
           type="submit"
-          disabled={pending}
+          disabled={busy}
           className="h-12 rounded-sm px-6 text-base"
         >
-          {pending ? "Sending inquiry…" : "Send inquiry"}
+          {busy ? "Sending inquiry…" : "Send inquiry"}
         </Button>
         <p className="text-sm text-muted-foreground">
           Saved on this site. Not emailed.

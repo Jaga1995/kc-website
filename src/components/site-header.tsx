@@ -28,8 +28,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="h-1 bg-oxide" />
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
+      <div className="relative z-50 h-1 bg-oxide" />
+      <div className="relative z-50 mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 bg-background px-5 md:px-8">
         <Link href="/" className="flex items-center gap-3">
           <span className="grid size-9 place-items-center bg-ink text-[11px] font-medium tracking-[0.14em] text-paper">
             KC

@@ -144,7 +144,7 @@ export default function HomePage() {
         <h2 className="mt-3 max-w-2xl font-heading text-4xl tracking-tight text-balance md:text-5xl">
           Enquire, visit, scope, build, hand over.
         </h2>
-        <ol className="mt-10 grid gap-6 md:grid-cols-5">
+        <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {stages.map((stage) => (
             <li key={stage.id} className="border-t border-border pt-4">
               <p className="text-xs tracking-[0.18em] text-brass">{stage.number}</p>
